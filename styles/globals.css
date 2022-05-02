@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slick-track {
+  display:flex !important;
+  align-items:center
+}
+
+.ex-cor {
+  clip-path: polygon(13% 0, 100% 0, 100% 20%, 100% 88%, 84% 100%, 20% 100%, 0 100%, 0 15%);
+}
+
+
+@layer base{
+  .row{
+    @apply flex flex-row justify-center items-center   px-4 py-2
+  }
+  .slick-track{
+    @apply flex flex-row justify-center items-center
+  }
+  .col {
+    @apply flex flex-col justify-center items-center  py-5 px-5
+  }
+  .inset {
+    @apply top-0 left-0 right-0
+  }
+  .row-0 {
+    @apply flex flex-row justify-center items-center
+  }
+  .col-0{
+    @apply flex flex-col justify-center items-center
+  }
+  .text-0{
+    @apply font-bold text-lg
+  }
+  .trans {
+  @apply transition-all duration-300
+  }
+}
