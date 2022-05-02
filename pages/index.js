@@ -8,7 +8,7 @@ import { useEffect, useState, useRef } from "react";
 import actionitem4 from "../assets/auction-item-4.jpg";
 import slime from "../assets/slime.png";
 import Script from "next/script";
-import "./loader";
+
 import Slider from "react-slick";
 import { content } from "../assets/contents";
 import { HeartIcon } from "@heroicons/react/outline";
