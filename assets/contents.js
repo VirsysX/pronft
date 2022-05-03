@@ -1,4 +1,7 @@
 import auctionitem4 from "../assets/auction-item-4.jpg"
+import skelaton from"../assets/skelaton.png"
+import anm from"../assets/anime.png"
+import hnd from"../assets/hand.png"
 export const content = {
     header:{
         text1:"Virsys Marketplace",
@@ -6,11 +9,9 @@ export const content = {
         text3:"Here are many variations of passages of Lorem Ipsum available but the new majority have suffer alteration in by injected humour or randomised words. Lorem ipsum dolor sit amet consectetur adipiscing elits sed aliquam",
         img:[
             auctionitem4.src,
-            "https://api.lorem.space/image/game?w=150&h=120",
-            "https://api.lorem.space/image/book?w=150&h=120",
-            "https://api.lorem.space/image/furniture?w=150&h=120",
-            "https://api.lorem.space/image/book?w=150&h=120",
-            "https://api.lorem.space/image/game?w=150&h=120",
+            hnd.src,
+            skelaton.src,
+            anm.src,
         ]
     },
     auction:[
@@ -22,25 +23,25 @@ export const content = {
             inStock:"12"
           },
           {
-            name: "Living in Circle",
-            img: auctionitem4.src,
-            bid: "2.03",
-            creator: "Mobin",
-            inStock:"12"
+            name: "Panda Fighter",
+            img: anm.src,
+            bid: "7.97",
+            creator: "David",
+            inStock:"21"
           },
           {
-            name: "Living in Circle",
-            img: auctionitem4.src,
-            bid: "2.03",
-            creator: "Mobin",
-            inStock:"12"
+            name: "Hand of Midas",
+            img: hnd.src,
+            bid: "8.03",
+            creator: "Israk",
+            inStock:"7"
           },
           {
-            name: "Living in Circle",
-            img: auctionitem4.src,
-            bid: "2.03",
-            creator: "Mobin",
-            inStock:"12"
+            name: "Bahamut",
+            img: skelaton.src,
+            bid: "31,634",
+            creator: "Shihab",
+            inStock:"3"
           },
     ],
     products:[

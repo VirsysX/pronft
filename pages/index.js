@@ -6,7 +6,6 @@ import sectionBg from "../assets/section-shape-1.png";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/solid";
 import { useEffect, useState, useRef } from "react";
 import actionitem4 from "../assets/auction-item-4.jpg";
-import slime from "../assets/slime.png";
 import Script from "next/script";
 
 import Slider from "react-slick";
