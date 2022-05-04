@@ -1,8 +1,8 @@
 import auctionitem4 from "../assets/auction-item-4.jpg"
 import skelaton from"../assets/skelaton.png"
 import anm from"../assets/anime.png"
-import hnd from"../assets/hand.png"
 import Samurai from"../assets/sam.png"
+import foxman from"../assets/fox.png"
 export const content = {
     header:{
         text1:"Virsys Marketplace",
@@ -13,6 +13,7 @@ export const content = {
             Samurai.src,
             skelaton.src,
             anm.src,
+            foxman.src,
         ]
     },
     auction:[
@@ -44,6 +45,13 @@ export const content = {
             creator: "Shihab",
             inStock:"3"
           },
+          {
+            name: "Foxxey",
+            img: foxman.src,
+            bid: "31,634",
+            creator: "Shihab",
+            inStock:"3"
+          },
     ],
     products:[
         {
@@ -61,10 +69,10 @@ export const content = {
             inStock:"12"
           },
           {
-            name: "Living in Circle",
-            img: auctionitem4.src,
+            name: "Foxxey",
+            img: foxman.src,
             bid: "2.03",
-            creator: "Mobin",
+            creator: "Shihab",
             inStock:"12"
           },
           {
