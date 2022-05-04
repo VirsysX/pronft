@@ -2,6 +2,7 @@ import auctionitem4 from "../assets/auction-item-4.jpg"
 import skelaton from"../assets/skelaton.png"
 import anm from"../assets/anime.png"
 import hnd from"../assets/hand.png"
+import Samurai from"../assets/sam.png"
 export const content = {
     header:{
         text1:"Virsys Marketplace",
@@ -9,7 +10,7 @@ export const content = {
         text3:"Here are many variations of passages of Lorem Ipsum available but the new majority have suffer alteration in by injected humour or randomised words. Lorem ipsum dolor sit amet consectetur adipiscing elits sed aliquam",
         img:[
             auctionitem4.src,
-            hnd.src,
+            Samurai.src,
             skelaton.src,
             anm.src,
         ]
@@ -30,8 +31,8 @@ export const content = {
             inStock:"21"
           },
           {
-            name: "Hand of Midas",
-            img: hnd.src,
+            name: "Black swordsman",
+            img: Samurai.src,
             bid: "8.03",
             creator: "Israk",
             inStock:"7"
