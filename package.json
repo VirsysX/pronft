@@ -15,6 +15,7 @@
     "next": "12.1.5",
     "react": "^18.1.0",
     "react-dom": "18.1.0",
+    "react-lorem-ipsum": "^1.4.10",
     "react-owl-carousel": "^2.3.3",
     "react-slick": "^0.29.0",
     "react-swipe": "^6.0.4",

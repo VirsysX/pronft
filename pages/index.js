@@ -7,15 +7,54 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/solid";
 import { useEffect, useState, useRef } from "react";
 import actionitem4 from "../assets/auction-item-4.jpg";
 import Script from "next/script";
+import { Avatar } from "react-lorem-ipsum";
 
 import Slider from "react-slick";
 import { content } from "../assets/contents";
 import { HeartIcon } from "@heroicons/react/outline";
+
+const Dialogue = () => {
+  return (
+    <div className="col px-5 md:px-9 py-2 items-end">
+      <h1 className="text-xl font-bold mb-1 w-full text-center">Place a Bid</h1>
+      <p className="text-base font-bold mb-5  w-full text-center text-gray-500 row-0">
+        You must bid at least{" "}
+        <span className="text-white font-bold"></span>
+      </p>
+      <input
+        className="w-full p-8 bg-gray-500 placeholder:text-white/70 placeholder:text-right mb-4 input"
+        placeholder={`00.00 ETH `}
+        type="email"
+      />
+      <p className="text-base  mb-3">Enter Quantity</p>
+      <input
+        className="w-full p-8 placeholder:text-white/70 placeholder:text-right bg-gray-500 mb-3 input"
+        placeholder={`00.00 ETH `}
+        type="email"
+      />
+    
+      <div className="row mb-2 justify-between w-full">
+        <p className="text-lg font-bold">{`ETH 66.6`}</p>{" "}
+        <p className="text-base  text-gray-500">You must bid at least</p>
+      </div>
+      <div className="row justify-between w-full">
+        <p className="text-lg font-bold">{`ETH 00.05`}</p>{" "}
+        <p className="text-base  text-gray-500">Service Payments</p>
+      </div>
+      <div className="row justify-between w-full">
+        <p className="text-lg font-bold">{`ETH 67.1`}</p>{" "}
+        <p className="text-base  text-gray-500">Total Bid amount</p>
+      </div>
+      <Btn type="pri" className="w-full mt-2" >Place Bid</Btn>
+    </div>
+  );
+};
+
 const Navbar = () => {
   const [navbg, setNavBg] = useState("transparent");
   useEffect(() => {
     function onScroll(event) {
-      const backgroundcolor = window.scrollY < 100 ? "transparent" : "black";
+      const backgroundcolor = window.scrollY < 100 ? "transparent" : "#060125";
       setNavBg(backgroundcolor);
       console.log(backgroundcolor);
     }
@@ -35,7 +74,7 @@ const Navbar = () => {
           (elm, ind) => (
             <p
               key={ind}
-              className="px-3 text-base-content transition cursor-pointer text-0 hover:text-[#173D37]"
+              className="px-3 text-base-content transition cursor-pointer text-0 hover:text-[#43b4a0]"
             >
               {elm}
             </p>
@@ -88,38 +127,39 @@ const Header = () => {
   };
   const slider = useRef();
   return (
-    <div className="w-full h-full relative">
-      <div
-        className="col flex-col-reverse md:row w-full py-[100px] md:py-[180px] z-10 overflow-hidden"
-        style={{ backgroundImage: `url(${heroBg.src})` }}
-      >
-        <div className="container mx-auto px-1">
-          <div className="col flex-col-reverse md:row">
-            <div className="col w-full md:w-1/2 ">
-              <div className="container  mx-auto w-full">
-                <Slider {...settings} ref={slider}>
-                  {content.header.img.map((e, i) => (
-                    <div className="w-full h-full" key={i}>
-                      <img className="w-[80%] h-[80%] ex-cor" src={e} />
-                    </div>
-                  ))}
-                </Slider>
-              </div>
+    <div
+      className="h-full col  flex-col-reverse md:row w-full ex-bg py-[100px] md:py-[180px] z-10 overflow-hidden"
+      style={{ backgroundImage: `url(${heroBg.src})` }}
+    >
+      <div className="container mx-auto px-1">
+        <div className="col flex-col-reverse md:row">
+          <div className="col w-full md:w-1/2 ">
+            <div className="container  mx-auto w-full">
+              <Slider {...settings} ref={slider}>
+                {content.header.img.map((e, i) => (
+                  <div
+                    key={i}
+                    className="overflow-hidden ex-cor w-[80%] h-[80%]"
+                  >
+                    <Image src={e} alt={"nn"} placeholder="blur" />
+                  </div>
+                ))}
+              </Slider>
             </div>
-            <div className="col px-2 w-full md:w-1/2 items-end text-right">
-              <p className="text-base text-base-content mb-3">
-                {content.header.text1}
-              </p>
-              <h1 className="text-[32px] md:text-[54px] mb-4 font-bold">
-                {content.header.text2}
-              </h1>
-              <p className="text-[14px] text-base-content mb-3">
-                {content.header.text3}
-              </p>
-              <div className="row justify-end space-x-3">
-                <Btn type="sec">Create NFT</Btn>
-                <Btn type="pri">Get Started</Btn>
-              </div>
+          </div>
+          <div className="col px-2 w-full md:w-1/2 items-end text-right">
+            <p className="text-base text-base-content mb-3">
+              {content.header.text1}
+            </p>
+            <h1 className="text-[32px] md:text-[54px] mb-3 font-bold">
+              {content.header.text2}
+            </h1>
+            <p className="text-[14px] text-base-content mb-3">
+              {content.header.text3}
+            </p>
+            <div className="row justify-end space-x-3">
+              <Btn type="sec">Create NFT</Btn>
+              <Btn type="pri">Get Started</Btn>
             </div>
           </div>
         </div>
@@ -128,16 +168,11 @@ const Header = () => {
   );
 };
 
-const AuctionCard = ({ img, bid, creator, namex, }) => {
+const AuctionCard = ({ img, bid, creator, namex }) => {
   return (
-    <div className="col space-y-4 group mx-4 bg-[#091315] border-2 border-[#112327]">
-      <div className="overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={img}
-          alt="j"
-          className="w-full max-w-full transition-all duration-200 h-auto group-hover:scale-[1.05]"
-        />
+    <div className="col cursor-pointer space-y-4 group mx-4 bg-[#130e30] border-2 border-[#112327]">
+      <div className="overflow-hidden w-full  ">
+        <Image src={img} alt={namex} placeholder="blur" />
       </div>
 
       <div className="row-0 w-full justify-between">
@@ -150,8 +185,8 @@ const AuctionCard = ({ img, bid, creator, namex, }) => {
             <p className="text-0">Creator</p>
             <p className="font-bold text-lg">{creator}</p>
           </div>
-          <div className="row w-14 h-14 rounded-full bg-purple-400 font-bold text-lg first-letter:capitalize">
-            {creator[0]}
+          <div className="row-0 w-14 h-14 rounded-full overflow-hidden bg-purple-400 font-bold text-lg first-letter:capitalize">
+            <Avatar gender="male" className="w-full h-full" />
           </div>
         </div>
       </div>
@@ -163,16 +198,22 @@ const AuctionCard = ({ img, bid, creator, namex, }) => {
     </div>
   );
 };
-const ProductCard = ({ img, bid, creator, namex , stock}) => {
+
+const CollectionCard = ({ img, namex, item }) => {
   return (
-    <div className="col space-y-4 group mx-4 bg-[#091315] border-2 border-[#112327]">
-      <div className="overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={img}
-          alt="missing"
-          className="w-full max-w-full transition-all duration-200 h-auto group-hover:scale-[1.05]"
-        />
+    <div className="col cursor-pointer space-y-4  mx-4 bg-[#130e30] border-2 border-[#112327] ">
+      <div className="overflow-hidden w-full  ">
+        <Image src={img} alt={namex} placeholder="blur" />
+      </div>
+    </div>
+  );
+};
+
+const ProductCard = ({ img, bid, creator, namex, stock }) => {
+  return (
+    <div className="col cursor-pointer space-y-4 group mx-8 bg-[#130e30] border-2 border-[#112327]">
+      <div className="overflow-hidden w-full  ">
+        <Image src={img} alt={namex} placeholder="blur" />
       </div>
 
       <div className="row-0 w-full justify-between">
@@ -184,8 +225,8 @@ const ProductCard = ({ img, bid, creator, namex , stock}) => {
           <div className="col space-y-1">
             <p className="font-bold text-lg">{creator}</p>
           </div>
-          <div className="row w-14 h-14 rounded-full bg-purple-400 font-bold text-lg first-letter:capitalize">
-            {creator[0]}
+          <div className="row-0 w-14 h-14 rounded-full overflow-hidden bg-purple-400 font-bold text-lg first-letter:capitalize">
+            <Avatar gender="male" className="w-full h-full" />
           </div>
         </div>
       </div>
@@ -198,7 +239,7 @@ const ProductCard = ({ img, bid, creator, namex , stock}) => {
           {namex}
         </p>
       </div>
-      <button className="btn btn-wide">Place A Bid</button>
+      <label htmlFor="dialougex" className="btn btn-wide modal-button">Place a Bid</label>
     </div>
   );
 };
@@ -288,8 +329,16 @@ const Products = () => {
       <p className="text-0">Products</p>
       <h1 className="font-bold text-lg">Explore Products</h1>
       <div className="row flex-wrap w-full ">
-        {content.products.map((e,i)=>(
-          <div className="row w-full md:w-1/2 lg:w-1/3" key={i}><ProductCard img={e.img} bid={e.bid} creator={e.creator} namex={e.name} stock={e.inStock} /> </div>
+        {content.products.map((e, i) => (
+          <div className="row w-full md:w-1/2 lg:w-1/3" key={i}>
+            <ProductCard
+              img={e.img}
+              bid={e.bid}
+              creator={e.creator}
+              namex={e.name}
+              stock={e.inStock}
+            />{" "}
+          </div>
         ))}
       </div>
     </div>
@@ -298,7 +347,7 @@ const Products = () => {
 const Sells = () => {
   return (
     <div
-      className="col  w-full py-[60px] md:py-[50px] md:pt-[100px] px-10"
+      className="col ex-bg w-full py-[60px] md:py-[50px] md:pt-[100px] px-10"
       style={{ backgroundImage: `url(${sectionBg.src})` }}
     >
       <p className="text-0 text-right w-full mb-3">Auctions</p>
@@ -308,15 +357,15 @@ const Sells = () => {
         </Btn>
         <p className="text-lg font-bold text-right">Top Sellers</p>
       </div>
-      <div className="grid grid-cols-1 w-full  md:grid-cols-2 lg:grid-cols-3 gap-7  place-content-center mb-4">
+      <div className="grid grid-cols-1 w-full  md:grid-cols-2 lg:grid-cols-3 gap-7  place-content-center mb-3">
         {content.sellers.map((e, i) => (
-          <div className="row justify-end w-full bg-[#091315]" key={i}>
+          <div className="row justify-end w-full bg-[#130e30]" key={i}>
             <div className="col space-y-1 items-end">
               <p className="text-lg font-bold">{e.name}</p>
               <p className="text-0">ETH {e.eth}</p>
             </div>
-            <div className="w-[100px] row-0">
-              <img className="w-full max-w-[106%]" src={e.img} />
+            <div className="w-[90px] row-0">
+              <Avatar gender="male" className="w-full h-full" alt="man" />
             </div>
           </div>
         ))}
@@ -331,20 +380,30 @@ const Sells = () => {
 const Footer = () => {
   return (
     <footer
-      className="row w-full py-[15px] md:py-[20pxpx] md:pt-[12px] px-10 justify-end"
+      className="col md:row ex-bg w-full py-[15px] md:py-[20px] md:pt-[12px] px-8 md:px-10 items-end md:justify-between"
       style={{ backgroundImage: `url(${sectionBg.src})` }}
     >
-      <div className="col items-end w-full md:w-1/2">
-        <p className="text-lg font-bold ">About Us</p>
-        <p className="text-0">Who we are </p>
-        <p className="text-0">Why Us</p>
-        <p className="text-0">Our Mission</p>
-      </div>
-      <div className="col items-end w-full md:w-1/2">
-        <p className="text-lg font-bold ">Contact Us</p>
-        <p className="text-0">(+880) 123456789</p>
-        <p className="text-0">contact@virsys.com</p>
-        <p className="text-0">Gulsan, Dhaka</p>
+      {content.footer.map((e, i) => (
+        <div key={i} className="col w-full md:w-1/4   items-end">
+          <p className="text-xl font-bold mb-7 relative before:absolute before:-bottom-2 before:right-0 before:w-[80%] before:h-[3px] before:bg-[#43b4a0]">
+            {e.name}
+          </p>
+          {e.items.map((el, il) => (
+            <p
+              key={il}
+              className="row-0 text-base mb-5 cursor-pointer relative before:absolute before:-bottom-1 hover:text-[#43b4a0] transition-all before:right-0 before:w-0 before:transition-all hover:before:w-[100%] before:h-[1px] before:bg-[#43b4a0]  font-bold text-white"
+            >
+              {el} <span className="text-[#43b4a0] ml-3 text-lg"> &lt;</span>
+            </p>
+          ))}
+        </div>
+      ))}
+      <div className="col order-1 md:order-4 w-full md:w-1/4 items-end">
+        <p className="text-lg font-bold mb-5 text-white">Virsys</p>
+        <p className="text-xs row-0 justify-end  font-bold text-right">
+          Lorem ipsum dolor sit amet consec tetur aditonsi soom isotope elit
+          esumo tempo incidunt labore dolore magna aliqu core tetur
+        </p>
       </div>
     </footer>
   );
@@ -373,6 +432,13 @@ export default function Home() {
       <Sells />
       <Products />
       <Footer />
+      <input type="checkbox" id="dialougex" className="modal-toggle" />
+      <label htmlFor="dialougex" className="modal modal-bottom sm:modal-middle cursor-pointer">
+        <label className="modal-box relative" htmlFor="">
+        <label htmlFor="dialougex" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+         <Dialogue />
+        </label>
+      </label>
     </div>
   );
 }

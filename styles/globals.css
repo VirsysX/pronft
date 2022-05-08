@@ -27,6 +27,11 @@ a {
   clip-path: polygon(13% 0, 100% 0, 100% 20%, 100% 88%, 84% 100%, 20% 100%, 0 100%, 0 15%);
 }
 
+.ex-bg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 @layer base{
   .row{

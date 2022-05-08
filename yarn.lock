@@ -1681,6 +1681,11 @@ react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-lorem-ipsum@^1.4.10:
+  version "1.4.10"
+  resolved "https://registry.yarnpkg.com/react-lorem-ipsum/-/react-lorem-ipsum-1.4.10.tgz#b5a0dee81d2dc3c96123f85d4bcff3405441d2ff"
+  integrity sha512-PCEuauLZTGJkm++oxJeUycEgQOBg3qmmD7pn5sUyq9e0OvvNbW32RKQsSgalAYGUIbS91UkDgxvt6iHVAsqYJw==
+
 react-owl-carousel@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/react-owl-carousel/-/react-owl-carousel-2.3.3.tgz#bb8e40bfd740f6cda8f712863c3437484737d6c4"
