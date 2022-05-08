@@ -10,7 +10,7 @@ export const content = {
         text3:"Here are many variations of passages of Lorem Ipsum available but the new majority have suffer alteration in by injected humour or randomised words. Lorem ipsum dolor sit amet consectetur adipiscing elits sed aliquam",
         img:[
             auctionitem4,
-            Samurai,
+            
             skelaton,
             anm,
             foxman,
@@ -31,13 +31,7 @@ export const content = {
             creator: "David",
             inStock:"21"
           },
-          {
-            name: "Black swordsman",
-            img: Samurai,
-            bid: "8.03",
-            creator: "Israk",
-            inStock:"7"
-          },
+          
           {
             name: "Bahamut",
             img: skelaton,
@@ -77,7 +71,7 @@ export const content = {
           },
           {
             name: "Living in Circle",
-            img: Samurai,
+            img: anm,
             bid: "2.03",
             creator: "Mobin",
             inStock:"12"
