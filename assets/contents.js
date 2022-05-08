@@ -56,7 +56,7 @@ export const content = {
     products:[
         {
             name: "Living in Circle",
-            img: auctionitem4,
+            img: anm,
             bid: "2.03",
             creator: "Mobin",
             inStock:"12"
@@ -77,7 +77,7 @@ export const content = {
           },
           {
             name: "Living in Circle",
-            img: auctionitem4,
+            img: Samurai,
             bid: "2.03",
             creator: "Mobin",
             inStock:"12"
