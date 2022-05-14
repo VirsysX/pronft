@@ -1,18 +1,19 @@
 import auctionitem4 from "../assets/auction-item-4.jpg"
 import skelaton from"../assets/skelaton.png"
 import anm from"../assets/anime.png"
-import Samurai from"../assets/sam.png"
-import foxman from"../assets/fox.png"
+import Java from "../assets/java.jpg"
+import las from "../assets/las.jpg"
 export const content = {
     header:{
         text1:"Virsys Marketplace",
         text2:"Discover, Collect & Sell NFT Digital Art",
         text3:"Here are many variations of passages of Lorem Ipsum available but the new majority have suffer alteration in by injected humour or randomised words. Lorem ipsum dolor sit amet consectetur adipiscing elits sed aliquam",
         img:[
+            las,
             auctionitem4,
             skelaton,
             anm,
-            foxman,
+            las,
         ]
     },
     auction:[
@@ -33,14 +34,14 @@ export const content = {
           
           {
             name: "Bahamut",
-            img: Samurai,
+            img: Java,
             bid: "31,634",
             creator: "Shihab",
             inStock:"3"
           },
           {
             name: "Foxxey",
-            img: foxman,
+            img: las,
             bid: "31,634",
             creator: "Shihab",
             inStock:"3"
@@ -49,7 +50,7 @@ export const content = {
     products:[
         {
             name: "Living in Circle",
-            img: anm,
+            img: Java,
             bid: "2.03",
             creator: "Mobin",
             inStock:"12"
@@ -63,7 +64,7 @@ export const content = {
           },
           {
             name: "Foxxey",
-            img: foxman,
+            img: las,
             bid: "2.03",
             creator: "Shihab",
             inStock:"12"
